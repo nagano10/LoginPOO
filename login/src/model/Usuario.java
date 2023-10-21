@@ -17,7 +17,7 @@ public class Usuario {
         this.email = email;
         this.senha = senha;
         this.perfil = perfil;
-    }
+    }//builder
 
     public int getId() {
         return id;

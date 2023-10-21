@@ -31,13 +31,13 @@ public class App {
         test(service, adm, "456", cadastro, "Acesso concedido ao recurso Cadastrar usuário");
         test(service, adm, "456", consulta, "Acesso negado ao recurso Consultar usuário");
         test(service, adm, "456", excluir, "Recurso Excluir usuário inativo");
-        test(service, adm, "456", login, "Acesso negado ao recurso Logar");
+        test(service, adm, "456", login, "Acesso negado ao recurso Logar");//template
 
        
     }
 
     private static void test(AutenticacaoService service, Usuario usuario, String senha, Recurso recurso, String resultadoEsperado) {
-        var resultado = service.autenticar(usuario, senha, recurso);
+        var resultado = service.autenticar(usuario, senha, recurso);//builder
         if (resultado.equals(resultadoEsperado)) {
             System.out.println(String.format("V %s, %s, %s, %s", usuario.getPerfil(), senha, recurso.getNome(), resultado));
             return;
