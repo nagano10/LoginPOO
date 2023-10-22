@@ -16,9 +16,15 @@ public abstract class AutenticacaoService {
         this.proximo = proximo;
     }
 
-    public AutenticacaoService(Recurso recurso) {this.recurso = recurso;}
+    public AutenticacaoService(Recurso recurso, AutenticacaoService proximo) {
+        this.recurso = recurso;
+        this.proximo = proximo;
+    }
 
-    public abstract String autenticar();
+    public AutenticacaoService() {
+    }
+
+    public abstract String autenticar(Usuario usuario, String senha, Recurso recurso);
 
     public final AutenticacaoService ou(AutenticacaoService proximo){
 
