@@ -5,6 +5,8 @@ import model.Usuario;
 
 public class AutenticacaoSenha extends AutenticacaoService {
 
+    String senha;
+
     public AutenticacaoSenha(Usuario usuario, AutenticacaoService proximo) {
         super(usuario, proximo);
     }
